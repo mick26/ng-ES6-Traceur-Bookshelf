@@ -1,0 +1,70 @@
+<!--
+
+The frot-End is written with ECMA Script 6 (ES6)
+The 'Traceur' Transpiler is used to convert from ES6 to ES5 
+which the browsers will understand.
+
+Ref.
+Traceur javascript ES6 to ES6 transpiler
+https://github.com/google/traceur-compiler/
+https://github.com/jmcriffey/bower-traceur
+https://github.com/google/traceur-compiler/issues/1649
+-->
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Home</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/">e-Book Shelf</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">Books List</a></li>
+                        <li><a href="#/addBook">Add a Book</a></li>
+                        <li><a href="#/archive">Archive</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Views will be rendered here -->
+        <div ng-view="" class="view"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/traceur/traceur.js"></script>
+    
+    <script>
+        $traceurRuntime.options = traceur.util.Options.experimental();
+        new traceur.WebPageTranscoder(document.location.href).run();
+    </script>
+     
+    <!-- 
+    Bootstrap the App with Main App module
+    This takes the place of ng-App
+    -->
+    <script type="module" src="bootstrap.js"></script>
+</body>
+</html>

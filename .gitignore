@@ -1,0 +1,9 @@
+.DS_Store
+.env
+*!.env
+.example
+node_modules
+npm-debug
+.log
+public/bower_components
+public/lib

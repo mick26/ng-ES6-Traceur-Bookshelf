@@ -6,8 +6,10 @@ The latest version of javascript (ECMAScript6 aka ES6 aka Harmony) is on the way
 [Here](https://github.com/joyent/node/wiki/ES6-%28a.k.a.-Harmony%29-Features-Implemented-in-V8-and-Available-in-Node) are the ES6 features available in NodeJS.
 
 Angular 2.0 will be released later this year. It seems to be a complete rewrite and uses alot of ES6 features.
-There are some videos on the [AngularJS Web site](https://angularjs.org/) about Angular 2.0 features. 
-The [ng-learn](http://ng-learn.org/2014/03/AngularJS-2-Status-Preview/) Web site also contains quite a bit of information regarding Angular 2.0.
+Here are some links to check out:
+- [AngularJS Web site](https://angularjs.org/) Angular 2.0 videos. 
+- [AngularJS 2.0 Features and Beyond](https://www.youtube.com/watch?v=cwXZ0YFvpzs)
+- [ng-learn](http://ng-learn.org/2014/03/AngularJS-2-Status-Preview/) 
 
 
 It is possible to code using ES6 at the moment and use a ES6 to ES5 transpiler to convert the ES6 code to ES5 format which the browser will understand. The transpiler I used is [Traceur](https://github.com/google/traceur-compiler/) and specifically the [bower Traceur package](https://github.com/jmcriffey/bower-traceur).
@@ -20,6 +22,7 @@ This App is based on the Sitepoint article [Writing AngularJS Apps Using ES6](ht
 ## [Modules](http://www.sitepoint.com/understanding-es6-modules/?__kzp=0&__kzt=1424373942251) 
 
 Modules were not part of ES5. ES6 includes modules and each module is defined in its own file. The functions or variables defined in a module are not visible outside unless you explicitly export them. To export certain variables from a module use the keyword export. To use the exported variables in a different module you use import. Angular 2.0 will no longer have it's own modules but will just use ES6 modules.
+
 
 
 ## Defining Controllers
